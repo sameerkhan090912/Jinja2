@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Filter</h1>
+    <p>{{stuff}} --> Normal
+    <p>
+    <p>{{ stuff|upper }} --> upper
+    <p>
+    <p>{{ stuff|lower }} --> lower
+    <p>
+    <p>{{ stuff|capitalize }} --> capitalize
+    <p>
+    <p>{{ stuff|title }} --> title
+    <p>
+    <p>{{ stuff|trim }} --> tirm
+    <p>
+    <p>{{ stuff|striptags }} --> StripTag
+    <p>
+    <p>{{ stuff|safe }} --> safe
+    <p>
+
+    <h1>Favourite Fruits</h1>
+
+    <p>{{fav_fruit}}</p>
+    <p>{% for fruits in fav_fruit%}
+        {{fruits}} <br>
+        {% endfor %}
+    </p>
+
+<h1>Sports</h1>
+    <p>
+        {% for sport in sports %}
+            {{sport}} <br>
+        {% endfor %}
+    </p>
+
+<h1>name</h1>
+<p>
+    {% for nam in name %}
+        {% if nam==41 %}
+            {{nam + 100}} <br>
+        {% else %}
+            {{nam}} <br>
+        {% endif %}
+    {% endfor %}
+</p>
+
+<h1>Acessing single element from sport</h1>
+
+<p>
+    {{sports.0}} ==> <b>FistElement</b>
+</p>
+
+<h1>some More filter</h1>
+
+<p>
+    {{name.3}} ==>Acessing number 41 <br>
+    {{name.3|string + 100|string}}  ==>Converting number 41 into string and adding 100 number as a String <br>
+
+    {{name.0|reverse}} ==> reverse <br>
+
+</p>
+
+</body>
+
+</html>
