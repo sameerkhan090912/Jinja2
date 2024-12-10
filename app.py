@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 
 app=Flask(__name__)
-
+print(app)
 @app.route("/")
 def Hello():
     name="sameer_Khan"
